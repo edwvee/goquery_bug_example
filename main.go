@@ -18,8 +18,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
+	//why does it not crash?
+	
 	doc.Find("h3").Each(func(i int, sel *goquery.Selection) {
+		//why does it find this tag?
 		fmt.Printf("found h3 tag with length in %d bytes\n", len(sel.Text()))
 	})
+
 }
